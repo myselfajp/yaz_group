@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
     #my sites apps
     'mysite.apps.MysiteConfig',
+    'posts.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [
