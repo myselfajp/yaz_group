@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-wbk6i3&-_3(1uq)%fkgr^b2*v+klsd4o+p2m5)x-w3qf6tkw5h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["forwardmedia.pythonanywhere.com","www.forwardmedia.pythonanywhere.com"]
 
 
 # Application definition
