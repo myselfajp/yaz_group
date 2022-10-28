@@ -1,6 +1,5 @@
-from .views import *
 from django.urls import path
-from .views import http_base
+from .views import http_base,http_base2
 
 app_name="mysite"
 

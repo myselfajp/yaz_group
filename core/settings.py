@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-wbk6i3&-_3(1uq)%fkgr^b2*v+klsd4o+p2m5)x-w3qf6tkw5h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["forwardmedia.pythonanywhere.com","www.forwardmedia.pythonanywhere.com"]
+ALLOWED_HOSTS = ["forwardmedia.pythonanywhere.com","www.forwardmedia.pythonanywhere.com","127.0.0.1"]
 
 
 # Application definition
@@ -109,8 +109,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 # STATIC_ROOT = BASE_DIR / 'assets'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 STATICFILES_DIRS = [
     BASE_DIR / "assets",
