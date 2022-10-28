@@ -1,16 +1,39 @@
 from django.db import models
 
 # Create your models here.
-class PostType(models.Model):
-    name=models.CharField(max_length=255)
+class Team(models.Model):
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='team/',default='default.png')
+    discription = models.TextField()
+    facebook = models.CharField(max_length=255,default='.')
+    instagram = models.CharField(max_length=255,default='.')
+    linkdin = models.CharField(max_length=255,default='.')
+    whatsapp = models.CharField(max_length=255,default='.')
+    created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name
 
-class post(models.Model):
-    type = models.ManyToManyField(PostType)
+class Projects(models.Model):
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='projects/',default='default.png')
+    discription = models.TextField()
+    reference = models.CharField(max_length=255)
+    created_date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name
+
+class Services(models.Model):
     title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='posts/',default='default.png')
+    image = models.ImageField(upload_to='services/',default='default.png')
     discription = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.title
+
+class References(models.Model):
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='references/',default='default.png')
+    discription = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name
