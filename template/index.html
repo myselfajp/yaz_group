@@ -31,7 +31,7 @@
         <h2>BİR SONRAKİ PROJENİZ İÇİN KALİTELİ BİR YAPICI MI ARIYORSUNUZ?</h2>
       </div>
       <div class="col-lg-3">
-        <div class="quote-btn"><a href="qoute.html">başvur</a></div>
+        <div class="quote-btn"><a href="{% url 'mysite:qoute' %}">başvur</a></div>
       </div>
     </div>
     <!--Row End-->
@@ -63,7 +63,7 @@
           sorunları gidermek için müdahele eder ve projenin yapılan sözleşmeye uygun olarak
           yapılmasını sağlayarak yoğun bir şekilde en iyisini oluşturmaya bu yönde de çalışmalarını
           sürdürmeye devam edecektir.</p>
-        <div class="readmore"><a href="#">Daha fazla bilgi</a></div>
+        <div class="readmore"><a href="{% url 'mysite:about_us' %}">Daha fazla bilgi</a></div>
       </div>
       <div class="col-lg-5">
         <div class="about-image"><img src="{%  static 'images/about-jhoss.jpg' %}" alt=""></div>
@@ -83,13 +83,13 @@
       <li class="col-lg-4 col-md-6">
         <div class="service-image"><img src="{{ service.image.url }}" alt="">
           <div class="hoverlink">
-            <div class="icon"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+            <div class="icon"><a href="{% url 'posts:service_single' s_id=service.id %}"><i class="fa fa-link" aria-hidden="true"></i></a></div>
           </div>
         </div>
         <div class="service-details">
-          <h3><a href="#">{{ service.title }}</a></h3>
+          <h3><a href="{% url 'posts:service_single' s_id=service.id %}">{{ service.title }}</a></h3>
           <p>{{ service.discription|safe|truncatewords:20 }}</p>
-          <div class="readmore"><a href="#">Daha Fazla Bilgi</a></div>
+          <div class="readmore"><a href="{% url 'posts:service_single' s_id=service.id %}">Daha Fazla Bilgi</a></div>
         </div>
       </li>
       {% endfor %}

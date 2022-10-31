@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="navbar navbar-expand-lg bg-light">
-            <div class="logo"><a href="index.html"><img src="{%  static 'images/logo.png' %}" alt="" max-height="65"></a></div>
+            <div class="logo"><a href="/"><img src="{%  static 'images/logo.png' %}" alt="" max-height="65"></a></div>
             <div class="navbar-header">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -57,21 +57,21 @@
 
                   </li>
                   <li> <a href="{% url 'mysite:about_us' %}"> Hakkımızda </a></li>
-                  <li class="dropdown"> <a href="services.html"> Hizmetlerimiz <span class="caret"><i
+
+                  <li class="dropdown"> <a href="#"> Hizmetlerimiz <span class="caret"><i
                           class="fas fa-caret-down"></i></span></a>
                     <i class="fas fa-caret-down"></i>
-
-
                     <ul class="dropdown-menu">
-                      <li> <a href="services.html"> Hizmet 1 </a></li>
-                      <li> <a href="service-details.html"> Hizmet 1 </a></li>
+                      {% for service in services %}
+                      <li> <a href="{% url 'posts:service_single' s_id=service.id %}"> {{service.title}} </a></li>
+                      {% endfor %}
                     </ul>
 
 
                   </li>
-                  <li> <a href="projects.html"> Projelerimiz </a></li>
-                  <li> <a href="contact-us.html"> İletişim </a></li>
-                  <li> <a href="our-team.html"> Uzmanlarımız </a></li>
+                  <li> <a href="{% url 'mysite:projects' %}"> Projelerimiz </a></li>
+                  <li> <a href="{% url 'mysite:contact_us' %}"> İletişim </a></li>
+                  <li> <a href="{% url 'mysite:our_team' %}"> Uzmanlarımız </a></li>
                 </ul>
               </div>
             </nav>

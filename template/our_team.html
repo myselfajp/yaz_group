@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!--inner header start-->
+<div class="inner-heading">
+  <div class="container">
+    <h3>Uzmanlarımız</h3>
+  </div>
+</div>
+<!--inner header end--> 
+
+<!--inner content start-->
+<div class="inner-content teamWrp">
+  <div class="container">
+    <div class="row">
+      {% for person in team %}
+      <div class="col-lg-3 col-md-6">
+        <div class="team">
+          <div class="team-image"> <img src="{{person.image.url}}" alt=""  width="270" height="270">
+            <div class="team-info">
+              <h5><a href="#">{{person.name}}</a></h5>
+              <span>{{person.discription}}</span>
+              <ul class="experts">
+                <li><a href="{{person.facebook}}" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="{{person.instagram}}" target="blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/{{person.whatsapp}}" target="blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="{{person.linkdin}}" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!--inner content end--> 
+{% endblock %}
