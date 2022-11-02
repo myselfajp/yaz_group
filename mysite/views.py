@@ -3,7 +3,7 @@ from posts.models import Team,Services,Projects,References
 
 def http_index(request):
     team = Team.objects.all()[0:4]
-    projects = Projects.objects.all()
+    projects = Projects.objects.all().order_by("created_date")[0:16]
     services = Services.objects.all()
     references = References.objects.all()
     context={
@@ -13,7 +13,6 @@ def http_index(request):
         "references" : references,
     }
     return render(request,"index.html",context=context)
-
 
 
 def http_aboup_us(request):
@@ -70,6 +69,20 @@ def http_projects(request):
         "references" : references,
     }
     return render(request,"projects.html",context=context)
+
+
+def http_services(request):
+    team = Team.objects.all()
+    projects = Projects.objects.all()
+    services = Services.objects.all()
+    references = References.objects.all()
+    context={
+        "team":team,
+        "projects":projects,
+        "services":services,
+        "references" : references,
+    }
+    return render(request,"services.html",context=context)
 
 
 def http_our_team(request):
