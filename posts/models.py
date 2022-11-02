@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from django.db import models
 
 # Create your models here.
@@ -13,6 +12,8 @@ class Team(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name
+    class Meta:
+        verbose_name_plural = "Uzmanlar"
 
 class Projects(models.Model):
     name = models.CharField(max_length=255)
@@ -22,6 +23,8 @@ class Projects(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name
+    class Meta:
+        verbose_name_plural = "Projeler"
 
 class Services(models.Model):
     title = models.CharField(max_length=255)
@@ -30,6 +33,8 @@ class Services(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name_plural = "Hizmetler"
 
 class References(models.Model):
     name = models.CharField(max_length=255)
@@ -38,3 +43,5 @@ class References(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name
+    class Meta:
+        verbose_name_plural = "Referanslar"
