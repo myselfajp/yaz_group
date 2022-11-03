@@ -1,132 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Construction</title>
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="favicon.ico">
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="favicon.ico">
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/all.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="rs-plugin/css/settings.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-
- 
-</head>
-<body>
-
-<!-- Top bar start -->
-<div class="top-bar">
-  <div class="container"> 
-    <!-- Row Start -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <div class="top-text">We have more than 25 years of experiences</div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <ul class="topbar-links">
-          <li><a href="login.html"><i class="fas fa-lock" aria-hidden="true"></i> LOGIN</a></li>
-          <li><a href="register.html"><i class="fas fa-user" aria-hidden="true"></i> Register</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- Row End --> 
-  </div>
-</div>
-<!-- Top bar end --> 
-
-<!-- Header start -->
-<div class="header">
-  <div class="container"> 
-    
-    <!-- Row Start -->
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="navbar navbar-expand-lg bg-light">
-        <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
-        <div class="navbar-header">
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-            </div>
-          </div>
-      </div>
-      <div class="col-lg-9"> 
-        <!--navegation-->
-
-<div class="navigationwrape">
-<nav class="navbar navbar-expand-lg"> <a class="navbar-brand" href="#">Navbar</a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <button class="close-toggler" type="button" data-toggle="offcanvas"> <span><i class="fas fa-times-circle" aria-hidden="true"></i></span> </button>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="dropdown"> <a href="index.html" class="active"> Home <span class="caret"><i class="fas fa-caret-down"></i></span></a>
-                  <i class="fas fa-caret-down"></i>
-                  <ul class="dropdown-menu">
-                    <li> <a href="index.html"> Home version 1</a></li>
-                    <li> <a href="index2.html"> Home version 2 </a></li>
-                  </ul>
-                </li>
-                <li> <a href="about-us.html"> About Us </a></li>
-
-                 <li class="dropdown"> <a href="services.html"> Service <span class="caret"><i class="fas fa-caret-down"></i></span></a>
-                  <i class="fas fa-caret-down"></i>
-                  <ul class="dropdown-menu">
-                    <li> <a href="services.html"> Service </a></li>
-                    <li> <a href="service-details.html"> Service Details </a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown"> <a href="#"> Pages <span class="caret"><i class="fas fa-caret-down"></i></span></a>
-                  <i class="fas fa-caret-down"></i>
-                  <ul class="dropdown-menu">
-                    <li> <a href="about-us.html"> About Us </a></li>
-                    <li> <a href="our-team.html"> Our Team </a></li>
-                    <li> <a href="testimonials.html"> Testimonials </a></li>
-                    <li> <a href="faqs.html"> FAQ </a></li>
-                    <li> <a href="gallery.html"> Gallery </a></li>
-                    <li> <a href="404.html"> 404 Page </a></li>
-                  </ul>
-                </li>
-                <li> <a href="projects.html"> Projects </a></li>
-                <li class="dropdown"> <a href="blog.html"> Blog <span class="caret"><i class="fas fa-caret-down"></i></span></a>
-                  <i class="fas fa-caret-down"></i>
-                  <ul class="dropdown-menu">
-                    <li> <a href="blog-grid.html"> Blog Grid sidebar</a></li>
-                    <li> <a href="blog.html"> Blog List sidebar</a></li>
-                    <li> <a href="blog-grid-full-width.html"> Blog full width </a></li>
-                    <li> <a href="blog-details.html"> Blog Details with sidebar </a></li>
-                    <li> <a href="blog-details-full-width.html"> Blog Details </a></li>
-                  </ul>
-                </li>
-                <li> <a href="contact-us.html"> Contact us </a></li>
-              </ul>
-          </div>
-        </nav>
-</div> 
-
-      </div>
-    </div>
-    <!-- Row End --> 
-  </div>
-</div>
-
-<!-- Header end --> 
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
 
 <!--inner header start-->
 <div class="inner-heading">
   <div class="container">
-    <h3>404 Page</h3>
+    <h3>BİR HATA OLUŞTU</h3>
   </div>
 </div>
 <!--inner header end--> 
@@ -138,10 +18,9 @@
       <div class="col-lg-12 col-lg-12 col-md-12 col-xs-12">
         <div class="four-zero-page">
           <h2>404</h2>
-          <h3>Sorry Page Was Not Found</h3>
-          <p>The page you are looking is not available or has been removed.
-            Try going to Home Page by using the button below.</p>
-          <div class="readmore"> <a href="index.html">Go To Homepages</a> </div>
+          <h3>Sayfa Bulunmadı</h3>
+          <p>Bu sayfa sitemizden silinmiş olabilir</p>
+          <div class="readmore"> <a href="/">Ana sayfaya dön</a> </div>
         </div>
       </div>
     </div>
@@ -149,90 +28,4 @@
 </div>
 <!--inner content end--> 
 
-<!--Newsletter start-->
-<div class="ct_newsletter_wrap">
-  <div class="container">
-    <div class="newletter_des">
-      <h5>Subscribe Our Weekly Newsletter</h5>
-      <form action="register.html"> 
-        <label class="far fa-envelope"></label>
-        <input type="text" placeholder="Enter Your Email" class="form-control">
-        <button>Signup</button>
-      </form>
-    </div>
-  </div>
-</div>
-<!--Newsletter end--> 
-
-<!--Footer start-->
-<div class="footer-wrap">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-md-12 col-xs-12">
-        <div class="footer-logo"><a href="index.html"><img src="images/footer-logo.png" alt=""></a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam neque eget ipsum porta, sed convallis odio convallis... <a href="#">Read More</a> </p>
-        <div class="social"> <a href="#." target="_blank"> <i class="fab fa-facebook-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fab fa-twitter-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fab fa-google-plus-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fab fa-linkedin"></i></a> <a href="#." target="_blank"><i class="fab fa-youtube-square" aria-hidden="true"></i></a> </div>
-      </div>
-      <div class="col-lg-2 col-md-4 col-xs-12">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li> <a href="#"> Home </a></li>
-          <li> <a href="#"> About us</a></li>
-          <li> <a href="#"> Service</a></li>
-          <li> <a href="#"> Projects </a></li>
-          <li> <a href="#"> Blog </a></li>
-          <li> <a href="#"> Contact us </a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-12">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="#">Project Management</a></li>
-          <li><a href="#">Material Sourcing</a></li>
-          <li><a href="#">Space Optimization</a></li>
-          <li><a href="#">Construction &amp; installation </a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-12">
-        <h3>Contact Info</h3>
-        <div class="footer-address">1234 Lorem Road, ISpum A Kennesaw, GA 1234</div>
-        <div class="call-us"> <a href="#">(777) 123-4567</a></div>
-        <div class="fax"> <a href="#">(777) 132-4567</a></div>
-      </div>
-    </div>
-    <div class="footerWrp">
-      <div class="row">
-        <div class="col-lg-6 col-md-7">
-          <div class="copyright">© 2020 company name here | All Rights Reserved</div>
-        </div>
-        <div class="col-lg-6 col-md-5">
-          <ul class="foot footer-links">
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Footer end--> 
-
-<!--page scroll start-->
-<div class="page-scroll scrollToTop"><a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
-<!--page scroll start-->
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-2.1.4.min.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.bundle.min.js"></script> 
-
-<!-- Load JS siles --> 
-<!-- SLIDER REVOLUTION SCRIPTS  --> 
-<script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
-<script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
-<!-- general script file --> 
-<script src="js/owl.carousel.js"></script> 
-<script src="js/script.js"></script>
-</body>
-</html>
+{% endblock %}

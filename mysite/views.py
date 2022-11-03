@@ -97,3 +97,6 @@ def http_our_team(request):
         "references" : references,
     }
     return render(request,"our_team.html",context=context)
+
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
