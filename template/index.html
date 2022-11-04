@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <video autoplay muted="" poster="video" id="bgvid" loop>
+      <video autoplay muted="" poster="{%  static 'images/video.png' %}" id="bgvid" loop>
         <source src="{%  static 'videos/construction-background.mp4' %}" type="video/mp4">
       </video>
     </div>
@@ -86,7 +86,7 @@
         </div>
         <div class="service-details">
           <h3><a href="{% url 'posts:service_single' s_id=service.id %}">{{ service.title }}</a></h3>
-          <p>{{ service.discription|safe|truncatewords:20 }}</p>
+          <p>{{ service.discription|safe|truncatechars:40 }}</p>
           <div class="readmore"><a href="{% url 'posts:service_single' s_id=service.id %}">DAHA FAZLA BİLGİ</a></div>
         </div>
       </li>
