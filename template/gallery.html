@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!--inner header start-->
+<div class="inner-heading">
+  <div class="container">
+    <h3>Gallery</h3>
+  </div>
+</div>
+<!--inner header end--> 
+
+<!--inner content start-->
+<div class="inner-content">
+  <div class="container"> 
+    
+    <!-- Gallery start -->
+    
+    <ul class="gallery-service row">
+      {% for picuter in pictures %}
+      <li class="col-lg-3 col-md-6">
+        <div class="gallery-image"><a class="fancybox" href="{{picture.image}}" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="{{picture.image}}" alt=""></a></div>
+      </li>
+      {% endfor %}
+    </ul>
+    
+    <!-- Gallery start --> 
+    
+  </div>
+</div>
+<!--inner content end--> 
+
+{% endblock %}

@@ -36,6 +36,16 @@ class Services(models.Model):
     class Meta:
         verbose_name_plural = "Hizmetler"
 
+class Gallery(models.Model):
+    name = models.CharField(max_length=255,null=True)
+    project = models.ManyToManyField(Projects)
+    image = models.ImageField(upload_to='projects/')
+    created_date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name_plural = "Galeri"
+
 class References(models.Model):
     name = models.CharField(max_length=255)
     image = models.ImageField(upload_to='references/',null=True)
