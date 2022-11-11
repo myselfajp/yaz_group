@@ -18,25 +18,31 @@
       <div class="col-md-3"></div>
       <div class="col-md-6">
         <div class="contctxt">Lütfen bilgilerinizi tam olarak yazınız</div>
+
         <div class="formint conForm">
-          <form>
+          <form method="post" action="{% url 'contact:quote' %}">
+            {% csrf_token %}
             <div class="input-group">
-              <label class="input-group-addon">Adı <span>*</span></label>
-              <input type="text" class="form-control">
-            </div>
-            
-            <div class="input-group">
-              <label class="input-group-addon">Soyadı <span>*</span></label>
-              <input type="text" class="form-control">
+              <label class="input-group-addon">Adı ve soyadı <span>*</span></label>
+              <input name="full_name" type="text" class="form-control">
             </div>
             <div class="input-group">
               <label class="input-group-addon">TelefonNumarası <span>*</span></label>
-              <input type="text" class="form-control">
+              <input name="phone" type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <label class="input-group-addon">Mail adresiniz </label>
+              <input name="email" type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <label class="input-group-addon">Kısa açıklama </label>
+              <input name="message" type="text" class="form-control">
             </div>
             <div class="sub-btn">
               <input type="submit" class="sbutn" value="Başvur">
             </div>
           </form>
+
         </div>
       </div>
       <div class="col-md-3"></div>

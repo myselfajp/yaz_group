@@ -15,27 +15,42 @@
 <div class="inner-content">
   <div class="container">
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.591114174995!2d29.24478781567781!3d40.90278333385818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadb388c78ed11%3A0x577341d2d45e958f!2zw4fEsW5hcmRlcmUsIE9saW1waXlhdCBDZC4gTm86NjQsIDM0ODk2IFBlbmRpay_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1631032107092!5m2!1str!2str" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.591114174995!2d29.24478781567781!3d40.90278333385818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadb388c78ed11%3A0x577341d2d45e958f!2zw4fEsW5hcmRlcmUsIE9saW1waXlhdCBDZC4gTm86NjQsIDM0ODk2IFBlbmRpay_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1631032107092!5m2!1str!2str"
+        width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+
     <div class="contact-wrap">
       <div class="row">
         <div class="col-lg-8 column">
           <div class="contact-form">
-            <div id="message"></div>
-            <form method="post" action="contact.php" name="contactform" id="contactform">
+            <form method="post" action="{% url 'contact:contact_us' %}">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-lg-6">
-                  <input name="name" type="text" id="name" placeholder="Adı ve Soyadı">
+                  <input name="full_name" type="text" placeholder="Adı ve Soyadı">
                 </div>
                 <div class="col-lg-6">
-                  <input type="text" placeholder="Telefon Numarası">
+                  <input name="phone" type="text" placeholder="Telefon Numarası">
+                </div>
+                <div class="col-lg-6">
+                  <input name="subject" type="text" placeholder="konu">
+                </div>
+                <div class="col-lg-6">
+                  <input name="email" type="text" placeholder="Mail Adresi">
                 </div>
                 <div class="col-lg-12">
-                  <input name="email" type="text" id="email" placeholder="Mail Adresi">
+                  <textarea rows="4" name="message" placeholder="Nasıl yardımcı olabiliriz?"></textarea>
                 </div>
-                <div class="col-lg-12">
-                  <textarea rows="4" name="comments" id="comments" placeholder="Nasıl yardımcı olabiliriz?"></textarea>
+                {% if message %}
+                <div id="message">
+                  <div class="success">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    This is an alert box.
+                  </div>
                 </div>
+                {% endif %}
                 <div class="col-lg-12">
                   <button title="" class="button" type="submit" id="submit">Mesajı gönderin</button>
                 </div>

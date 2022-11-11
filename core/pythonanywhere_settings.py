@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wbk6i3&-_3(1uq)%fkgr^b2*v+klsd4o+p2m5)x-w3qf6tkw5h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["forwardmedia.pythonanywhere.com","www.forwardmedia.pythonanywhere.com","127.0.0.1"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'mysite.apps.MysiteConfig',
     'posts.apps.PostsConfig',
     'contact.apps.ContactConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -67,12 +68,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'forwardmedia$yazgroup_db',
+    'USER': 'forwardmedia',
+    'PASSWORD': 'ali1326121',
+    'HOST': 'forwardmedia.mysql.pythonanywhere-services.com'
 
+}
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -112,13 +116,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-#STATIC_ROOT = BASE_DIR / 'assets'
-MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = '/home/forwardmedia/yaz_group/assets'
+MEDIA_ROOT = '/home/forwardmedia/yaz_group/media'
 
-
-STATICFILES_DIRS = [
-    BASE_DIR / "assets",
-]
+#STATICFILES_DIRS = [
+#    BASE_DIR / "assets",
+#]
 
 
 # Default primary key field type

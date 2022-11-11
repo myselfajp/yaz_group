@@ -17,6 +17,9 @@
   <link href="{%  static 'css/all.css' %}" rel="stylesheet">
   <link href="{%  static 'css/owl.carousel.css' %}" rel="stylesheet">
   <link href="{%  static 'css/style.css' %}" rel="stylesheet">
+  {% if message %}
+  <link href="{%  static 'css/popup.css' %}" rel="stylesheet">
+  {% endif %}
   <link rel="stylesheet" href="{%  static 'rs-plugin/css/settings.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
     rel="stylesheet">
@@ -76,7 +79,7 @@
 
                   </li>
                   <li> <a href="{% url 'mysite:projects' %}"> Projelerimiz </a></li>
-                  <li> <a href="{% url 'mysite:contact_us' %}"> İletişim </a></li>
+                  <li> <a href="{% url 'contact:contact_us' %}"> İletişim </a></li>
                   <li> <a href="{% url 'mysite:our_team' %}"> Uzmanlarımız </a></li>
                 </ul>
               </div>
@@ -133,7 +136,7 @@
             <li> <a href="{% url 'mysite:about_us' %}"> Hakkımızda</a></li>
             <li> <a href="{% url 'mysite:services' %}"> Hizmetlerimiz</a></li>
             <li> <a href="{% url 'mysite:projects' %}"> Projelerimiz</a></li>
-            <li> <a href="{% url 'mysite:contact_us' %}"> İletişim</a></li>
+            <li> <a href="{% url 'contact:contact_us' %}"> İletişim</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-xs-12">
@@ -188,6 +191,9 @@
     });
   </script>
   {% endif %}
+
+
+
 
 </body>
 

@@ -7,6 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('mysite.urls')),
     path('',include('posts.urls')),
+    path('',include('contact.urls')),
+
 
 
 ]
