@@ -13,19 +13,15 @@
 <!--inner content start-->
 <div class="inner-content">
   <div class="container"> 
-    
     <!-- Gallery start -->
-    
     <ul class="gallery-service row">
-      {% for picuter in pictures %}
+      {% for picture in pictures %}
       <li class="col-lg-3 col-md-6">
-        <div class="gallery-image"><a class="fancybox" href="{{picture.image}}" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="{{picture.image}}" alt=""></a></div>
+        <div class="gallery-image"><a class="fancybox" href="{{picture.image.url}}" data-fancybox-group="gallery" title="{{ picture.name }}"><img src="{{picture.image.url}}" alt=""></a></div>
       </li>
       {% endfor %}
     </ul>
-    
     <!-- Gallery start --> 
-    
   </div>
 </div>
 <!--inner content end--> 

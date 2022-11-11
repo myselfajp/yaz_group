@@ -21,7 +21,7 @@
           <div class="project-image"><img src="{{ project.image.url }}" alt="">
             <div class="portfolio-overley">
               <div class="content">
-                <h3><a href="{{ project.reference }}" target="_blank">{{project.name}}</a></h3>
+                <h3><a href="{% url 'posts:gallery' s_id=project.id %}" >{{project.name}}</a></h3>
                 <div class="portfolio-tags"> <span>{{project.discription}}</span> </div>
               </div>
             </div>
