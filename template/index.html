@@ -73,6 +73,7 @@
 <!--About start-->
 
 <!--service start-->
+{% if services %}
 <div class="service-wrap">
   <div class="container">
     <h1>BİZİM <span>HİZMETLERİMİZ</span></h1>
@@ -94,9 +95,11 @@
     </ul>
   </div>
 </div>
+{% endif %}
 <!--service end-->
 
 <!--porfolio start-->
+{% if projects %}
 <div class="porfolio-wrap">
   <div class="container">
     <h1>Son <span>Projeler</span></h1>
@@ -116,9 +119,11 @@
     </ul>
   </div>
 </div>
+{% endif %}
 <!--porfolio end-->
 
 <!--Testimonials start-->
+{% if references %}
 <div class="testimonials-wrap">
   <div class="container">
     <div class="heading-wrap">
@@ -137,9 +142,11 @@
     </ul>
   </div>
 </div>
+{% endif %}
 <!--Testimonials end-->
 
 <!--Team Start-->
+{% if team %}
 <div class="team_wrap">
   <div class="container">
     <h1><span>Uzmanlarımız</span></h1>
@@ -165,6 +172,7 @@
     </div>
   </div>
 </div>
+{% endif %}
 <!--Team end-->
 
 {% endblock %}

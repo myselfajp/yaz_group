@@ -24,11 +24,11 @@
             {% csrf_token %}
             <div class="input-group">
               <label class="input-group-addon">Adı ve soyadı <span>*</span></label>
-              <input name="full_name" type="text" class="form-control">
+              <input name="full_name" type="text" class="form-control" required>
             </div>
             <div class="input-group">
               <label class="input-group-addon">TelefonNumarası <span>*</span></label>
-              <input name="phone" type="text" class="form-control">
+              <input name="phone" type="text" class="form-control" required>
             </div>
             <div class="input-group">
               <label class="input-group-addon">Mail adresiniz </label>
@@ -36,7 +36,7 @@
             </div>
             <div class="input-group">
               <label class="input-group-addon">Kısa açıklama </label>
-              <input name="message" type="text" class="form-control">
+              <input name="message" type="text" class="form-control" required>
             </div>
             <div class="sub-btn">
               <input type="submit" class="sbutn" value="Başvur">

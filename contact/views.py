@@ -28,7 +28,13 @@ def http_contact_us(request):
         messageform.mail=email
         messageform.subject=subject
         messageform.message=message
-        messageform.save()
+        if full_name and phone and message:
+            messageform.save()
+            context["message"]="Mesajınız aldık en kısa sürede size dönüş yapacağız"
+        else:
+            context["error"]="Tüm boşlukları doldurmanız gerekiyor"
+            
+        
 
     return render(request,"contact_us.html",context=context)
 
@@ -57,7 +63,10 @@ def http_quote(request):
         quotemessage.phone=phone
         quotemessage.mail=email
         quotemessage.message=message
-        quotemessage.save()
-        context["message"]="Başarıyla gönderildi"
+        if full_name and phone and message:
+            quotemessage.save()
+            context["message"]="Mesajınız aldık en kısa sürede size dönüş yapacağız"
+        else:
+            context["error"]="Tüm boşlukları doldurmanız gerekiyor"
 
     return render(request,"quote.html",context=context)

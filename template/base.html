@@ -67,6 +67,8 @@
                   </li>
                   <li> <a href="{% url 'mysite:about_us' %}"> Hakkımızda </a></li>
 
+
+                  {% if services %}
                   <li class="dropdown"> <a href="{% url 'mysite:services' %}"> Hizmetlerimiz <span class="caret"><i
                           class="fas fa-caret-down"></i></span></a>
                     <i class="fas fa-caret-down"></i>
@@ -75,12 +77,16 @@
                       <li> <a href="{% url 'posts:service_single' s_id=service.id %}"> {{service.title}} </a></li>
                       {% endfor %}
                     </ul>
-
-
                   </li>
+                  {% endif %}
+                  {% if projects %}
                   <li> <a href="{% url 'mysite:projects' %}"> Projelerimiz </a></li>
+                  {% endif %}
+
                   <li> <a href="{% url 'contact:contact_us' %}"> İletişim </a></li>
+                  {% if team %}
                   <li> <a href="{% url 'mysite:our_team' %}"> Uzmanlarımız </a></li>
+                  {% endif %}
                 </ul>
               </div>
             </nav>
@@ -134,8 +140,12 @@
           <h3>Hızlı Linkler</h3>
           <ul class="footer-links">
             <li> <a href="{% url 'mysite:about_us' %}"> Hakkımızda</a></li>
+            {% if services %}
             <li> <a href="{% url 'mysite:services' %}"> Hizmetlerimiz</a></li>
+            {% endif %}
+            {% if projects %}
             <li> <a href="{% url 'mysite:projects' %}"> Projelerimiz</a></li>
+            {% endif %}
             <li> <a href="{% url 'contact:contact_us' %}"> İletişim</a></li>
           </ul>
         </div>
