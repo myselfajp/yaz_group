@@ -42,7 +42,14 @@
               <input type="submit" class="sbutn" value="Başvur">
             </div>
           </form>
-
+          {% if message %}
+          <div id="message">
+            <div class="success">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              {{message}}
+            </div>
+          </div>
+          {% endif %}
         </div>
       </div>
       <div class="col-md-3"></div>
